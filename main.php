@@ -1,6 +1,9 @@
 <?php
 
-$form = new form2("post", "testformulaire.php");
+include 'formulaire.php';
+include 'form2.php';
+
+$form = new form2("post", "main.php");
 $form->ajouterZoneDeTexte("Nom");
 $form->ajouterZoneDeTexte("Code");
 $form->ajouterBouton();
@@ -17,12 +20,16 @@ if(isset($_POST["Nom"]) && isset($_POST["Code"])) {
 
 if(isset($_POST["Homme"]) || isset($_POST["Femme"])) {
     if(isset($_POST["Homme"])) {
-        echo $_POST['Homme'] . "<br>";
+        echo "C'est un homme.<br>";
     }
     if(isset($_POST["Femme"])) {
-        echo $_POST['Femme'];
+        echo "C'est une femme.<br>";
     }
 }
 
-echo $_POST['Tennis'];
-echo $_POST['Archerie'];
+if (isset($_POST['Tennis'])){
+    echo "Il/Elle fait du tennis.<br>";
+}
+if (isset($_POST['Archerie'])){
+    echo "Il/Elle fait de l'archerie.<br>";
+}

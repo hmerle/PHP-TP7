@@ -1,6 +1,5 @@
 <?php
 
-
 class form2 extends formulaire{
     public function addRadioBouton($text){
         echo "$text"."<input type='radio' name='".$text."'/><br>";
