@@ -15,7 +15,7 @@ $form->getForm();
 
 if(isset($_POST["Nom"]) && isset($_POST["Code"])) {
     echo $_POST['Nom']."<br>";
-    echo $_POST['Code'];
+    echo $_POST['Code']."<br>";
 }
 
 if(isset($_POST["Homme"]) || isset($_POST["Femme"])) {
