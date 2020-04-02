@@ -1,5 +1,7 @@
 <?php
 
+echo '<a href="main.php">Actualiser</a><br><br><br>';
+
 include 'formulaire.php';
 include 'form2.php';
 
@@ -7,8 +9,8 @@ $form = new form2("post", "main.php");
 $form->ajouterZoneDeTexte("Nom");
 $form->ajouterZoneDeTexte("Code");
 $form->ajouterBouton();
-$form->addRadioBouton('Homme');
-$form->addRadioBouton('Femme');
+$form->addRadioButton('Homme', "id");
+$form->addRadioButton('Femme', "id");
 $form->addCheckBox('Tennis');
 $form->addCheckBox('Archerie');
 $form->getForm();
