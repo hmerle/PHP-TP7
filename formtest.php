@@ -1,11 +1,11 @@
 <?php
 
-echo '<a href="main.php">Actualiser</a><br><br><br>';
+echo '<a href="formtest.php">Actualiser</a><br><br><br>';
 
 include 'formulaire.php';
 include 'form2.php';
 
-$form = new form2("post", "main.php");
+$form = new form2("post", "formtest.php");
 $form->ajouterZoneDeTexte("Nom");
 $form->ajouterZoneDeTexte("Code");
 $form->addRadioButton('Homme', "id");
