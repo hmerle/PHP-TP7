@@ -19,19 +19,16 @@ trait DEUX{
 }
 
 class Texte{
-    private $text;
-    public function __construct($text){
-        $this->text = $text;
-    }
-
     use UN, DEUX {
         DEUX::small insteadof UN;
         UN::big insteadof DEUX;
-        DEUX::small as petit;
-        UN::big as gros;
+        DEUX::big as gros;
+        UN::small as petit;
     }
 }
 
-$text = new Texte("Ceci est le texte");
-$text->petit($text);
-$text->gros($text);
+$texte = new Texte();
+$texte->small("Bonjour");
+$texte->petit(" à");
+$texte->gros(" tous");
+$texte->big(" !!!");
