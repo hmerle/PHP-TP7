@@ -28,7 +28,9 @@ class Circle implements Shape {
 
 function testShapes(){
     $s = new Square(5,5);
-    echo $s->getArea();
+    echo $s->getArea()."<br>";
     $c = new Circle(5);
-    echo $c->getArea();
+    echo $c->getArea()."<br>";
 }
+
+testShapes();
