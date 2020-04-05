@@ -25,9 +25,9 @@ class Texte{
     }
 
     use UN, DEUX {
-        DEUX::small insteadof UN::small;
+        DEUX::small insteadof UN;
         DEUX::small as petit;
-        UN::big insteadof DEUX::big;
+        UN::big insteadof DEUX;
         UN::big as gros;
     }
 }
